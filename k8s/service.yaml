@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: canary-demo-svc
+  namespace: canary-demo
+  labels:
+    app: canary-demo
+spec:
+  type: NodePort
+  selector:
+    # Solo selecciona por "app", así ambos deployments
+    # (stable y canary) reciben tráfico.
+    app: canary-demo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+      nodePort: 30080

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>K8s Canary Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <span class="logo-icon">⎈</span>
+        <h1>Canary Deploy <span class="accent">Demo</span></h1>
+      </div>
+      <p class="subtitle">Pipeline CD · Canary Release · Rollback</p>
+    </header>
+
+    <main>
+      <div class="card version-card">
+        <div class="card-label">Versión activa</div>
+        <div id="version" class="card-value">--</div>
+        <div id="version-tag" class="tag">cargando...</div>
+      </div>
+
+      <div class="card health-card">
+        <div class="card-label">Estado de salud</div>
+        <div id="health-indicator" class="health-dot"></div>
+        <div id="health-status" class="card-value small">--</div>
+      </div>
+
+      <div class="card info-card">
+        <div class="card-label">Info del pod</div>
+        <ul class="info-list">
+          <li><strong>Hostname:</strong> <span id="hostname">--</span></li>
+          <li><strong>Uptime:</strong> <span id="uptime">--</span></li>
+          <li><strong>Requests:</strong> <span id="requests">--</span></li>
+        </ul>
+      </div>
+
+      <div class="card log-card">
+        <div class="card-label">Registro de actividad</div>
+        <div id="log" class="log-area"></div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Proyecto académico &mdash; Administración de Websites</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "k8s-canary-demo",
+  "version": "1.0.0",
+  "description": "Demo de Canary Deployment con Kubernetes",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
